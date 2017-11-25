@@ -9,7 +9,7 @@ class Header extends Component {
                 <ul>
                     <li><Link to='/'>Dashboard</Link></li>
                     <li><Link to='/todo'>To Do</Link></li>
-                    <li><Link to'/counter'>Counter</Link></li>
+                    <li><Link to='/counter'>Counter</Link></li>
                 </ul>
             </div>
 
