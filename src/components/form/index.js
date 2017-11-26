@@ -13,7 +13,7 @@ class Form extends Component {
         this.state = {
             content: 'sth inside...'
         };
-
+        this.handleSubmit = this.handleFormSubmit.bind(this);
     }
 
     handleFormTitle(event) {
@@ -29,6 +29,11 @@ class Form extends Component {
         });
     }
 
+    handleFormSubmit(event) {
+        console.log(this.state);
+        event.preventDefault();//zeby przy wysyłce forma strona nie ładowała sie od nowa...
+    }
+
     render() {
        return(
            <div>
@@ -41,12 +46,18 @@ class Form extends Component {
                        <input type='text' name='name' onChange={this.handleTitle} />//wprowadzamy nowy event
                    </label>
                    <input type='submit' value='Submit' />
-                   <textarea onChange={this.handleContent}/>
+                   <div>
+                       <textarea onChange={this.handleContent}/>
+                   </div>
                    <select>
                        <option>Opcja1</option>
                        <option>Opcja2</option>
                        <option>Opcja3</option>
                    </select>
+                   <div>
+                       <input type='sumbit' value='wyślij mnie proszę...'/>
+                   </div>
+
                </form>
            </div>
 
