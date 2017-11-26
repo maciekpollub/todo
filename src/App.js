@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Form from './components/form/index.js';
 import Button from './components/button/index.js';
 import './App.css';
+import Search from './components/search/index.js'
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
         <Router>
             <div>
                 <Header/>
+                <Search/>
                 <Button label='ok!'/>
                   <Route exact path='/' component={Dashboard}/>
                   <Route path='/todo' component={Todo}/>

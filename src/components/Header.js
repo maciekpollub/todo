@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import Button from './button/index';
-import Form from './form/index';
 
 class Header extends Component {
     render() {
