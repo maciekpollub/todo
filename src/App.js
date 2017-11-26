@@ -4,6 +4,8 @@ import {BrowserRouter as Router, Route } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
 import Todo from './components/Todo';
 import Header from './components/Header';
+import Form from './components/form/index.js';
+import Button from './components/button/index.js';
 import './App.css';
 
 class App extends Component {
@@ -12,9 +14,11 @@ class App extends Component {
         <Router>
             <div>
                 <Header/>
-                <Route exact path='/' component={Dashboard}/>
-                 <Route path='/todo' component={Todo}/>
-                 <Route path='/header' component={null}/>
+                <Button label='ok!'/>
+                  <Route exact path='/' component={Dashboard}/>
+                  <Route path='/todo' component={Todo}/>
+                  <Route path='/form' component={Form}/>
+                  <Route path='/header' component={null}/>
             </div>
         </Router>
     );
