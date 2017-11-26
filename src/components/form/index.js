@@ -8,18 +8,32 @@ class Form extends Component {
             title: 'dfghd',
             content: 'dfghdfghd',
             category: 'books'
+
         };
+        this.handleTextArea = this.handleTextArea.bind(this);//dodajemy zdarzenie : obsługa textarea...
+        this.state = {
+            textarea: 'sth inside...'
+        };
+
     }
 
     handleTitle(event) {
         this.setState({
             title: event.target.value
+
+        });
+    }
+
+    handleTextArea(event) {
+        this.setState({
+            textarea: event.target.value
         });
     }
 
     render() {
        return(
            <div>
+               <h3>{this.state.textarea}</h3>
                <h3>{this.state.title}</h3>
                <p>{this.state.content}</p>
                <p>Category: {this.state.category}</p>
@@ -29,6 +43,12 @@ class Form extends Component {
                        <input type='text' name='name' onChange={this.handleTitle} />//wprowadzamy nowy event
                    </label>
                    <input type='submit' value='Submit' />
+                   <textarea onChange={this.handleTextArea}/>
+                   <select>
+                       <option>Opcja1</option>
+                       <option>Opcja2</option>
+                       <option>Opcja3</option>
+                   </select>
                </form>
            </div>
 
