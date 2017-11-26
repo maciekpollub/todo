@@ -3,39 +3,37 @@ import React, { Component } from 'react';
 class Form extends Component {
     constructor(props){//chcemy zmieniac stany formularza...
         super(props);
-        this.handleTitle = this.handleTitle.bind(this);
+        this.handleTitle = this.handleFormTitle.bind(this);
         this.state = {
             title: 'dfghd',
-            content: 'dfghdfghd',
             category: 'books'
 
         };
-        this.handleTextArea = this.handleTextArea.bind(this);//dodajemy zdarzenie : obsługa textarea...
+        this.handleContent = this.handleFormContent.bind(this);//dodajemy zdarzenie : obsługa textarea...
         this.state = {
-            textarea: 'sth inside...'
+            content: 'sth inside...'
         };
 
     }
 
-    handleTitle(event) {
+    handleFormTitle(event) {
         this.setState({
             title: event.target.value
 
         });
     }
 
-    handleTextArea(event) {
+    handleFormContent(event) {
         this.setState({
-            textarea: event.target.value
+            content: event.target.value
         });
     }
 
     render() {
        return(
            <div>
-               <h3>{this.state.textarea}</h3>
-               <h3>{this.state.title}</h3>
-               <p>{this.state.content}</p>
+               <h3>{this.state.content}</h3>
+               <h3>{(this.state.title !== '') ? 'promocja!  ' + this.state.title : ''}</h3>
                <p>Category: {this.state.category}</p>
                <form>
                    <label>
@@ -43,7 +41,7 @@ class Form extends Component {
                        <input type='text' name='name' onChange={this.handleTitle} />//wprowadzamy nowy event
                    </label>
                    <input type='submit' value='Submit' />
-                   <textarea onChange={this.handleTextArea}/>
+                   <textarea onChange={this.handleContent}/>
                    <select>
                        <option>Opcja1</option>
                        <option>Opcja2</option>
