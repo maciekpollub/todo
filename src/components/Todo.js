@@ -22,10 +22,9 @@ class Todo extends Component {
         },5000);
         }
 
-    }
 
-    render()
-        {
+
+    render(){
         return(
             <div>
                 <h2>My to do list</h2>
@@ -37,6 +36,8 @@ class Todo extends Component {
             </div>
         );
     }
+    }
+
 
 
 export default Todo;
