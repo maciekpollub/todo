@@ -8,6 +8,7 @@ import Form from './components/form/index.js';
 import Button from './components/button/index.js';
 import './App.css';
 import Search from './components/search/index.js'
+import Users from './components/Users'
 
 class App extends Component {
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
                   <Route path='/todo' component={Todo}/>
                   <Route path='/form' component={Form}/>
                   <Route path='/header' component={null}/>
+                  <Route path='/users' component={Users}/>
             </div>
         </Router>
     );
