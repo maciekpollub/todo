@@ -20,7 +20,7 @@ class Users extends Component {
     fetchData(){//skorzytamu z wbudowanego polecenia fetch, które pobierze dane z serwera ze strony o zadanym url-u
         this.setState({loading: true});//po nacisnięciu buttona,  przez czas ładowania się danych z serwera, ma się
         // wyświetlać na czerwono informacja Loading,,,,
-        fetch('https://jsonplaceholder.typicode.com/users')
+        fetch('https://jsonplaceholder.typicode.com/users')//możnaby tego fetcha setTimeout'owac, żeby dłużej widzieć czerwony napis Loading
             .then(response => {
                 return response.json();
             })
