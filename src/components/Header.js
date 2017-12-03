@@ -13,6 +13,7 @@ class Header extends Component {
                     <li><Link to='/counter'>Counter</Link></li>
                     <li><Link to='/form'>Form</Link></li>
                     <li><Link to='/users'>Users</Link></li>
+                    <li><Link to='/tasks'>Tasks</Link></li>
                 </ul>
             </div>
 
